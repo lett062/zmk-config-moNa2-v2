@@ -29,13 +29,13 @@
         };
 
         single {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <19 20>;
+            bindings = <&kp SQT>;
+            key-positions = <18 19>;
         };
 
         double {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
         };
     };
 
