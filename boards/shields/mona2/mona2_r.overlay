@@ -90,3 +90,13 @@
         20 // L
     >;
 };
+
+
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_central>;
+
+        input-processors = <&zip_temp_layer 6 10000>;
+    };
+};
