@@ -1,7 +1,6 @@
 #include "mona2.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <input/processors.dtsi>
 
 
 &default_transform {
@@ -90,13 +89,4 @@
         19 // K
         20 // L
     >;
-};
-
-/ {
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_central>;
-
-        input-processors = <&zip_temp_layer 6 10000>;
-    };
 };
