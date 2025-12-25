@@ -20,25 +20,21 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            layers = <0 1 2 3 4 5>;
             key-positions = <7 8>;
         };
 
         plus {
             bindings = <&kp PLUS>;
-            layers = <0 1 2 3 4 5>;
             key-positions = <6 7>;
         };
 
         single {
             bindings = <&kp SQT>;
-            layers = <0 1 2 3 4 5>;
             key-positions = <18 19>;
         };
 
         double {
             bindings = <&kp DOUBLE_QUOTES>;
-            layers = <0 1 2 3 4 5>;
             key-positions = <17 18>;
         };
     };
