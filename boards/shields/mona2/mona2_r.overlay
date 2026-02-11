@@ -77,7 +77,8 @@
 // Overrides for the input listener node
 &trackball_central_listener {
     status = "okay";
-    device = <&mouse_runtime_input_processor>;
+    device = <&trackball_central>;
+    input-processors = <&mouse_runtime_input_processor>;
 
     scroller {
         layers = <3>;
