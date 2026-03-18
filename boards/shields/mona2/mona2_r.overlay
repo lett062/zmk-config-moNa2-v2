@@ -1,9 +1,6 @@
 #include "mona2.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <input/processors.dtsi>
-#include <input/processors/runtime-input-processor.dtsi>
-#include <behaviors/battery_history_request.dtsi>
 
 
 &default_transform {
@@ -84,9 +81,9 @@
         layers = <3>;
         input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
             // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え(デフォルトはこれだけOFF)
-            // <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
-            // <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            // <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-            // <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
+             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
+             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
+             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
+             <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
     };
 };
